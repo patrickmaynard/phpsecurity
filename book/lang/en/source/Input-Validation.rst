@@ -64,7 +64,7 @@ Rather than attempting to fix input, you should just apply a relevant whitelist 
 Never Trust External Validation Controls But Do Monitor Breaches
 ----------------------------------------------------------------
 
-In the section on context, I noted that validation should occur whenever data moves into a new context. This applies to validation processes which occur outside of the web application itself. Such controls may include validation or other constraints applied to a HTML form in a browser. Consider the following HTML5 form (labels omitted).
+In the section on context, I noted that validation should occur whenever data moves into a new context. This applies to validation processes which occur outside of the web application itself. Such controls may include validation or other constraints applied to an HTML form in a browser. Consider the following HTML5 form (labels omitted).
 
 .. code-block:: html
     :linenos:
@@ -90,7 +90,7 @@ With all of these controls, it's important to remember that they are intended to
 
 Another example of external validation controls may be the constraints applied to the response schema of third-party APIs such as Twitter. Twitter is a huge name and it's tempting to trust them without question. However, since we're paranoid, we really shouldn't. If Twitter were ever compromised, their responses may contain unsafe data we did not expect so we really do need to apply our own validation to defend against such a disaster.
 
-Where we are aware of the external validation controls in place, we may, however, monitor them for breaches. For example, if a HTML form imposes a maxlength attribute but we receive input that exceeds that lenght, it may be wise to consider this as an attempted bypass of validation controls by a user. Using such methods, we could log breaches and take further action to discourage a potential attacker through access denial or request rate limiting.
+Where we are aware of the external validation controls in place, we may, however, monitor them for breaches. For example, if a HTML form imposes a maxlength attribute but we receive input that exceeds that length, it may be wise to consider this as an attempted bypass of validation controls by a user. Using such methods, we could log breaches and take further action to discourage a potential attacker through access denial or request rate limiting.
 
 Evade PHP Type Conversion
 -------------------------
